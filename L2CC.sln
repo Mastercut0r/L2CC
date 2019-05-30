@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.28803.202
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "L2CC.MVVM", "L2CC.MVVM\L2CC.MVVM.csproj", "{D0D295C3-0A54-4B61-A5B0-A698356CA937}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "L2CC.Core", "L2CC.Core\L2CC.Core.csproj", "{083C1F27-5CBA-42C1-85A1-C2FD20B07824}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{D0D295C3-0A54-4B61-A5B0-A698356CA937}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D0D295C3-0A54-4B61-A5B0-A698356CA937}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D0D295C3-0A54-4B61-A5B0-A698356CA937}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D0D295C3-0A54-4B61-A5B0-A698356CA937}.Release|Any CPU.Build.0 = Release|Any CPU
+		{083C1F27-5CBA-42C1-85A1-C2FD20B07824}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{083C1F27-5CBA-42C1-85A1-C2FD20B07824}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{083C1F27-5CBA-42C1-85A1-C2FD20B07824}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{083C1F27-5CBA-42C1-85A1-C2FD20B07824}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {FF061541-5C5B-4C05-A2F4-D1863F6A249A}
+	EndGlobalSection
+EndGlobal
