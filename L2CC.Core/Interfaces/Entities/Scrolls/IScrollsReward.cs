@@ -1,10 +1,18 @@
-﻿namespace L2CC.Core.Interfaces.Entities
+﻿namespace L2CC.Core.Interfaces.Entities.Scrolls
 {
     /// <summary>
-    /// Interface IScrolls represents container for experience scrolls rewarded for completion of an instance
+    /// Interface IScrollsReward represents container for experience scrolls rewarded for completion of an instance
     /// </summary>
-    public interface IScrolls
+    public interface IScrollsReward
     {
+        /// <summary>
+        /// Count for 1kk daily quest scrolls
+        /// </summary>
+        int OneMillDailyScrollsCount { get; }
+        /// <summary>
+        /// Count for 10kk daily quest scrolls
+        /// </summary>
+        int TenMillDailyScrollsCount { get; }
         /// <summary>
         /// Gets the ten kk scroll count.
         /// </summary>
@@ -30,5 +38,10 @@
         /// </summary>
         /// <value>The total money.</value>
         ulong TotalMoney { get; }
+        /// <summary>
+        /// Adds the other scrolls to this scrolls container
+        /// </summary>
+        /// <param name="scrolls"></param>
+        void AddScrolls(IScrollsReward scrolls);
     }
 }

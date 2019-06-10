@@ -1,0 +1,15 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netcoreapp3.0</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\L2CC.Core\L2CC.Core.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="EpicInstances\" />
+  </ItemGroup>
+
+</Project>

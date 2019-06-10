@@ -1,11 +1,10 @@
-﻿using L2CC.Core.Interfaces.Entities;
+﻿using L2CC.Core.Interfaces.Entities.Scrolls;
 
 namespace L2CC.Core.Interfaces.DataAccess
 {
     public interface IEpicRewardRepository
     {
-        IScrolls GetReward(int level);
+        IScrollsReward GetReward(int level);
         bool IsApplicable(int currentLevel);
-
     }
 }
