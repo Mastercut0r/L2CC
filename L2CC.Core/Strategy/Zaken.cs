@@ -5,8 +5,8 @@ namespace L2CC.Core.Strategy
 {
     sealed class Zaken : StrategyBase, IStrategy
     {
-        IEpicRewardRepository m_EpicBossReward;
-        public Zaken(IEpicRewardRepository epicBossRewardRepository, IExperienceRepository experienceRepository) : base(experienceRepository)
+        IEpicReward m_EpicBossReward;
+        public Zaken(IEpicReward epicBossRewardRepository, IExperienceRepository experienceRepository) : base(experienceRepository)
         {
             m_EpicBossReward = epicBossRewardRepository;
         }

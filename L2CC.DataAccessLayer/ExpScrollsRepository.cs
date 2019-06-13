@@ -1,4 +1,6 @@
-﻿using L2CC.Core.Interfaces.Entities.Scrolls;
+﻿using L2CC.Core.Entities;
+using L2CC.Core.Interfaces.Entities.Scrolls;
+using L2CC.DataAccessLayer.Repository;
 
 namespace L2CC.DataAccessLayer
 {
@@ -16,6 +18,7 @@ namespace L2CC.DataAccessLayer
         private IScrollsReward m_threeHundredFiftyMil = new ExpScrolls(0, 1, 3);
         private IScrollsReward m_fourHundredMil = new ExpScrolls(0, 0, 4);
         private IScrollsReward m_sixHundredMil = new ExpScrolls(0, 0, 6);
+        private IScrollsReward m_EmptyContainer = new ExpScrolls(0, 0, 0);
 
         public IScrollsReward TenMil => m_tenMil;
 
@@ -40,5 +43,7 @@ namespace L2CC.DataAccessLayer
         public IScrollsReward FourHundredMil => m_fourHundredMil;
 
         public IScrollsReward SixHundredMil => m_sixHundredMil;
+
+        public IScrollsReward Empty => m_eightyMil;
     }
 }

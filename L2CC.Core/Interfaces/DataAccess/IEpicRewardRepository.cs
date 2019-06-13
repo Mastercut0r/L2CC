@@ -1,10 +1,10 @@
 ﻿using L2CC.Core.Interfaces.Entities.Scrolls;
+using System.Collections.Generic;
 
 namespace L2CC.Core.Interfaces.DataAccess
 {
     public interface IEpicRewardRepository
     {
-        IScrollsReward GetReward(int level);
-        bool IsApplicable(int currentLevel);
+        IReadOnlyDictionary<int, IScrollsReward> LoadEpicRewardTable<EpicReward>() where EpicReward : IEpicReward;
     }
 }

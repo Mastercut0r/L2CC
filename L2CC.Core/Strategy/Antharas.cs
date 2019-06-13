@@ -5,8 +5,8 @@ namespace L2CC.Core.Strategy
 {
     sealed class Antharas : StrategyBase, IStrategy
     {
-        IEpicRewardRepository m_EpicBossReward;
-        public Antharas(IEpicRewardRepository epicBossRewardRepository, IExperienceRepository experienceRepository) : base(experienceRepository)
+        IEpicReward m_EpicBossReward;
+        public Antharas(IEpicReward epicBossRewardRepository, IExperienceRepository experienceRepository) : base(experienceRepository)
         {
             m_EpicBossReward = epicBossRewardRepository;
         }

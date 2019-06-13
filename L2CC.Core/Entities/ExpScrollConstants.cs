@@ -1,6 +1,4 @@
-﻿using L2CC.Core.Interfaces.Entities.Scrolls;
-
-namespace L2CC.DataAccessLayer
+﻿namespace L2CC.Core.Entities
 {
     internal class ExpScrollConstants
     {

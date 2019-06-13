@@ -5,8 +5,8 @@ namespace L2CC.Core.Strategy
 {
     sealed class Baium : StrategyBase, IStrategy
     {
-        IEpicRewardRepository m_EpicBossReward;
-        public Baium(IEpicRewardRepository epicBossRewardRepository, IExperienceRepository experienceRepository) : base(experienceRepository)
+        IEpicReward m_EpicBossReward;
+        public Baium(IEpicReward epicBossRewardRepository, IExperienceRepository experienceRepository) : base(experienceRepository)
         {
             m_EpicBossReward = epicBossRewardRepository;
         }

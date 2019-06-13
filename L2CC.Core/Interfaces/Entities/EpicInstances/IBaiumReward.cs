@@ -2,7 +2,7 @@
 
 namespace L2CC.Core.Interfaces.Entities.EpicInstances
 {
-    interface IBaiumReward : IEpicRewardRepository
+    public interface IBaiumReward : IEpicReward
     {
     }
 }

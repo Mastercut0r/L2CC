@@ -1,12 +1,12 @@
 ﻿using L2CC.Core.Interfaces.Entities.Scrolls;
 
-namespace L2CC.DataAccessLayer
+namespace L2CC.DataAccessLayer.Repository
 {
     internal interface IExpScrollsRepository
     {
         IScrollsReward TenMil { get; }
         IScrollsReward ThirtyMil { get; }
-        IScrollsReward FiftyMil{ get; }
+        IScrollsReward FiftyMil { get; }
         IScrollsReward EightyMil { get; }
         IScrollsReward HundredMil { get; }
         IScrollsReward HundredTwentyMil { get; }
@@ -16,6 +16,6 @@ namespace L2CC.DataAccessLayer
         IScrollsReward ThreeHundredFiftyMil { get; }
         IScrollsReward FourHundredMil { get; }
         IScrollsReward SixHundredMil { get; }
-
+        IScrollsReward Empty { get; }
     }
 }

@@ -1,5 +1,4 @@
 ﻿using L2CC.Core.Interfaces.DataAccess;
-using L2CC.Core.Interfaces.Entities;
 using L2CC.Core.Interfaces.Entities.EpicInstances;
 using System.Collections.Generic;
 
@@ -7,18 +6,15 @@ namespace L2CC.Core.Strategy
 {
     class StrategyFactory : IStrategyFactory
     {
-        private readonly IEpicInstancesProvider m_EpicBossProvider;
-        private readonly IClanArena m_ClanArena;
+        private readonly IInstanceRewardProvider m_IInstanceRewardProvider;
         private readonly IExperienceRepository m_ExperienceRepository;
         private readonly IDailyQuestReward m_DailyQuestReward;
         public StrategyFactory(
-            IEpicInstancesProvider epicBossProvider, 
-            IClanArena clanArena, 
-            IExperienceRepository experienceRepository, 
+            IInstanceRewardProvider rewardProvider,
+            IExperienceRepository experienceRepository,
             IDailyQuestReward dailyQuestReward)
         {
-            m_EpicBossProvider = epicBossProvider;
-            m_ClanArena = clanArena;
+            m_IInstanceRewardProvider = rewardProvider;
             m_ExperienceRepository = experienceRepository;
             m_DailyQuestReward = dailyQuestReward;
         }
@@ -34,18 +30,18 @@ namespace L2CC.Core.Strategy
             var strategies = new List<IStrategy>();
             if (arena)
             {
-                strategies.Add(new Arena(startBossStage, endBossStage, m_ClanArena, m_ExperienceRepository));
+                strategies.Add(new Arena(startBossStage, endBossStage, m_IInstanceRewardProvider.LoadClanArena(), m_ExperienceRepository));
             }
             {
-                strategies.Add(new Baium(m_EpicBossProvider.LoadRewardRepository<IBaiumReward>(), m_ExperienceRepository));
+                strategies.Add(new Baium(m_IInstanceRewardProvider.LoadRewardRepository<IBaiumReward>(), m_ExperienceRepository));
             }
             if (antharas)
             {
-                strategies.Add(new Antharas(m_EpicBossProvider.LoadRewardRepository<IAntharasReward>(), m_ExperienceRepository));
+                strategies.Add(new Antharas(m_IInstanceRewardProvider.LoadRewardRepository<IAntharasReward>(), m_ExperienceRepository));
             }
             if (zaken)
             {
-                strategies.Add(new Zaken(m_EpicBossProvider.LoadRewardRepository<IZakenReward>(), m_ExperienceRepository));
+                strategies.Add(new Zaken(m_IInstanceRewardProvider.LoadRewardRepository<IZakenReward>(), m_ExperienceRepository));
             }
             if (dailyQuests)
             {

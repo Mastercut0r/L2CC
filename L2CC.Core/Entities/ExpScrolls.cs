@@ -1,6 +1,6 @@
 ﻿using L2CC.Core.Interfaces.Entities.Scrolls;
 
-namespace L2CC.DataAccessLayer
+namespace L2CC.Core.Entities
 {
     public class ExpScrolls : IScrollsReward
     {
@@ -75,10 +75,6 @@ namespace L2CC.DataAccessLayer
         //    int hundred = firstReward.HundredKkScrollCount + secondReward.HundredKkScrollCount;
         //    return new ExpScrolls(ten, fifty, hundred, oneDaily, tenDaily);
         //}
-        public static IScrollsReward CreateEmptyContainer()
-        {
-            return new ExpScrolls(0, 0, 0);
-        }
 
         public void AddScrolls(IScrollsReward scrolls)
         {
@@ -92,7 +88,7 @@ namespace L2CC.DataAccessLayer
 
         public static IScrollsReward Empty()
         {
-            return new ExpScrolls(0, 0);
+            return new ExpScrolls(0, 0, 0);
         }
     }
 }
