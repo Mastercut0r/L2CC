@@ -1,12 +1,12 @@
 ﻿using L2CC.Core.Interfaces.DataAccess;
 using L2CC.Core.Interfaces.Entities;
 
-namespace L2CC.Core.Strategy
+namespace L2CC.Core.DomainLogic.Strategy
 {
-    sealed class Antharas : StrategyBase, IStrategy
+    sealed class Baium : StrategyBase, IStrategy
     {
         IEpicReward m_EpicBossReward;
-        public Antharas(IEpicReward epicBossRewardRepository, IExperienceRepository experienceRepository) : base(experienceRepository)
+        public Baium(IEpicReward epicBossRewardRepository, IExperienceRepository experienceRepository) : base(experienceRepository)
         {
             m_EpicBossReward = epicBossRewardRepository;
         }

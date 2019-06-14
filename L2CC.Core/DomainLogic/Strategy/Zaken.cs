@@ -1,7 +1,7 @@
 ﻿using L2CC.Core.Interfaces.DataAccess;
 using L2CC.Core.Interfaces.Entities;
 
-namespace L2CC.Core.Strategy
+namespace L2CC.Core.DomainLogic.Strategy
 {
     sealed class Zaken : StrategyBase, IStrategy
     {

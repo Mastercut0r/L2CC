@@ -2,7 +2,7 @@
 using L2CC.Core.Interfaces.Entities;
 using L2CC.Core.Interfaces.Entities.EpicInstances;
 
-namespace L2CC.Core.Strategy
+namespace L2CC.Core.DomainLogic.Strategy
 {
     sealed class DailyQuests : StrategyBase, IStrategy
     {

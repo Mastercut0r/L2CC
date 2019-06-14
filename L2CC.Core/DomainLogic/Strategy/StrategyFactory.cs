@@ -2,7 +2,7 @@
 using L2CC.Core.Interfaces.Entities.EpicInstances;
 using System.Collections.Generic;
 
-namespace L2CC.Core.Strategy
+namespace L2CC.Core.DomainLogic.Strategy
 {
     class StrategyFactory : IStrategyFactory
     {

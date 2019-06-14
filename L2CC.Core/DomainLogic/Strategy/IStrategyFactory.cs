@@ -1,6 +1,6 @@
 ﻿using System.Collections.Generic;
 
-namespace L2CC.Core.Strategy
+namespace L2CC.Core.DomainLogic.Strategy
 {
     public interface IStrategyFactory
     {
