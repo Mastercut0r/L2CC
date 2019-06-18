@@ -39,6 +39,10 @@ namespace L2CC.AppLogic.ServiceLocator
         }
         public IServiceInterface CreateService<IServiceInterface>(Type typeToCreate) where IServiceInterface : class
         {
+            if (typeToCreate == null)
+            {
+                return null;
+            }
             ConstructorInfo ctor = typeToCreate.GetConstructors().First();
             ObjectActivator<IServiceInterface> createdActivator = GetActivator<IServiceInterface>(ctor);
             //create an instance:
